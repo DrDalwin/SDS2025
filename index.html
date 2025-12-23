@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <title>SDS-Curriculam</title>
+</head>
+<style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    h1 {
+        color: green;
+    }
+</style>
+
+
+<head>
+	<style>
+/*This code is styling the HTML elements in the document. Here is a breakdown of
+what each part of the code does:*/
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: white;
+		}
+
+		.container {
+			border: 1px solid grey;
+			margin: 1rem;
+		}
+
+		[data-tab-info] {
+			display: none;
+		}
+
+		.active[data-tab-info] {
+			display: block;
+		}
+
+		.tab-content {
+			margin-top: 1rem;
+			padding-left: 1rem;
+			font-size: 20px;
+			font-family: sans-serif;
+			font-weight: bold;
+			color: rgb(0, 0, 0);
+		}
+
+		.tabs {
+			border-bottom: 1px solid grey;
+			background-color: rgb(16, 153, 9);
+			font-size: 25px;
+			color: rgb(0, 0, 0);
+			display: flex;
+			margin: 0;
+		}
+
+		.tabs span {
+			background: rgb(16, 153, 9);
+			padding: 10px;
+			border: 1px solid rgb(255, 255, 255);
+		}
+
+		.tabs span:hover {
+			background: rgb(55, 219, 46);
+			cursor: pointer;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+<h1>Department of Statistics and Data Science</h1>
+<h3>Curriculum Development Cell(CDC)</h3>
+	<!-- Body Container -->
+	<div class="container">
+	
+		<!-- Tabs Detail -->
+		<div class="tabs">
+			<span data-tab-value="#tab_1">BSc DS</span>
+			<span data-tab-value="#tab_2">BSc DM</span>
+			<span data-tab-value="#tab_3">MSc DS</span>
+			<span data-tab-value="#tab_4">MSc STAT</span>
+			<span data-tab-value="#tab_5">MSc DA</span>
+			<span data-tab-value="#tab_6">MSc CSAI</span>
+			
+		</div>
+
+		<!-- Tab content -->
+		<div class="tab-content">
+			<div class="tabs__tab active" id="tab_1" data-tab-info>
+				<p></p>
+
+    <h3>BSc Data Science, Statistics</h3>
+    <object class="pdf" 
+            data=
+"https://drive.google.com/file/d/1mW_q2ossNLBjYVlyTBxK9521mLNngg9G/preview"
+            width="800"
+            height="500">
+    </object>
+
+			</div>
+			<div class="tabs__tab" id="tab_2" data-tab-info>
+				<h3>BSc Data Science, Mathematics</h3>
+    <object class="pdf" 
+            data=
+"https://drive.google.com/file/d/16NbouGmAW3mXykunQIHx-SKs_VuelHqo/preview"
+            width="800"
+            height="500">
+    </object>
+
+			</div>
+			<div class="tabs__tab" id="tab_3" data-tab-info>
+				<h3>MSc Data Science</h3>
+    <object class="pdf" 
+            data=
+"https://drive.google.com/file/d/1Cv8g8pIQRAXuHfxkzKSGqSUGDvvoMGg_/preview"
+            width="800"
+            height="500">
+    </object>
+			</div>
+<div class="tabs__tab" id="tab_4" data-tab-info>
+				<h3>MSc Statistics</h3>
+    <object class="pdf" 
+            data=
+"https://drive.google.com/file/d/1_xY0tjPAo3Os4z1Q8UnN4ouLI7zXlxmD/preview"
+            width="800"
+            height="500">
+    </object>
+			</div>
+<div class="tabs__tab" id="tab_5" data-tab-info>
+				<h3>MSc Data Analytics (CBCS)</h3>
+    <object class="pdf" 
+            data=
+""
+            width="800"
+            height="500">
+    </object>
+			</div>
+<div class="tabs__tab" id="tab_6" data-tab-info>
+				<h3>MSc Computational Statistics and Applied AI</h3>
+    <object class="pdf" 
+            data=
+""
+            width="800"
+            height="500">
+    </object>
+			</div>
+
+		</div>
+	</div>
+	<div class="tabs__tab" id="tab_7" data-tab-info>
+				<iframe src="https://docs.google.com/spreadsheets/d/1a8Pev8eNwzWeafqHaNLooGN9ZPofXmB9/edit?usp=sharing&ouid=110606020674000208624&rtpof=true&sd=true" width="1200" height="700" align="Middle"></iframe>
+		</div>
+	<script type="text/javascript">
+	
+		// function to get each tab details
+		const tabs = document.querySelectorAll('[data-tab-value]')
+		const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+		tabs.forEach(tab => {
+			tab.addEventListener('click', () => {
+				const target = document
+					.querySelector(tab.dataset.tabValue);
+				tabInfos.forEach(tabInfo => {
+					tabInfo.classList.remove('active')
+				})
+				target.classList.add('active');
+			})
+		})
+	</script>
+</body>
+
+</html>
